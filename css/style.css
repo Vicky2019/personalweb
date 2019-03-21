@@ -1,0 +1,493 @@
+ /*================================================
+            Table of contents  
+==================================================
+ 
+00. base css
+01. preloader
+02. section title and padding
+03. intro section
+04. about section
+05. service section
+06. quotes area
+07. portfolio section
+08. review section
+09. contact section
+10. footer section
+====================================================
+            End table content 
+===================================================*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900');
+.main-menu ul.navbar-nav li.active a.theme-color{
+    color: #70e1f5;
+}
+.main-menu ul.navbar-nav li:hover a.theme-color{
+    color: #70e1f5;
+}
+.welcome-text h1 span.theme-color{
+    color: #70e1f5;
+}
+.banner-icon.theme-color{
+    color: #70e1f5;
+}
+.btn.theme-color, a.btn.theme-color{
+    background: #70e1f5;
+    color: #fff;
+}
+.social-icon.theme-color a:hover{
+    background: #70e1f5;
+    color: #fff;
+}
+.section-title h2 span.theme-color {
+  color: #70e1f5;
+}
+.review-list .owl-dots div.active{
+    background: #70e1f5;
+}
+/*================================================
+    00. base css
+==================================================*/
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family:"宋体"
+}
+p{
+    color: #fff;
+    font-family:"宋体"
+}
+html,body { 
+    height: 100%;
+width: 100%; }
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    position: relative;
+    background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+a:hover { text-decoration: none }
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+/*================================================
+    01. preloader
+==================================================*/
+.preloader {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:#fff;
+    z-index:9999999;
+}
+.preloader .spinner {
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/*================================================
+    02. section title and section padding
+==================================================*/
+.music-top{
+    z-index:99;
+    width: 100%;
+    height: 25px;
+    background-color:rgb(0,0,0,0.2);
+    line-height: 25px;
+    position: relative;
+}
+.music-top i,#musicName{
+float:left;
+color:white;
+}
+.music-top i{
+    color:white;
+    /* position: absolute; */
+}
+.music-top .icon-yinle{
+    animation: rotate 3s linear infinite;
+margin-left:2%;
+margin-right:6%;
+}
+.music-top .icon-chahao{
+margin-right:1%;
+float:right;
+cursor: pointer;
+}
+.music-top #musicName{
+    width: 200px;
+    text-align: center;
+    display:inline-block;
+    margin-left:10px;
+    font-size:14px;
+    font-family:"微软雅黑";  
+}
+.icon-shangyishou,.icon-bofang,.icon-xiayishou,.icon-play_icon{
+    cursor: pointer;
+}
+.music-top .play i{
+    margin:auto 10px;
+}
+.icon-play_icon{
+    display:none;
+}
+audio{
+    width: 300px;
+height: 40px;
+z-index:9;
+position: fixed;
+bottom:0;
+right:0;
+}
+.section-padding{
+    background: rgb(0,0,0,0.5);
+    padding: 80px 0;
+}
+/*================================================
+    03. intro section
+==================================================*/
+.intro-section{
+    height: 100%;
+}
+.welcome-area{
+    position: relative;
+    background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.welcome-area:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    z-index: -1;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.welcome-table{
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.welcome-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.welcome-cell .me{
+    display:none;
+}
+.welcome-text button{
+    background-color: #70e1f5;
+    color:white;
+    height: 50px;
+    width: 100px;
+    border:0;
+    font-size:20px;
+}
+#active{
+    cursor: pointer;
+}
+.welcome-cell .me img{
+    border-radius: 50%;
+    width: 10%;
+}
+.welcome-text h1{
+    font-size: 45px;
+    color: #fff;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+.welcome-text h4{
+    color: #fff;
+    margin: 15px 0;
+    font-size: 18px;
+    letter-spacing: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/*** HEADER AREA ***/
+.custom-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    padding: 20px 0;
+    background: transparent;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+.custom-navbar.top-nav-collapse{
+    background: rgba(0, 0, 0, 0.4);
+}
+.logo a img{
+    display: inline-block;
+    height: 40px;
+    margin-top:5px;
+}
+.logo span img{
+    margin-top:4px;
+}
+.logo a:focus {
+    text-decoration: none;
+}
+
+.main-menu{
+    text-transform: uppercase;
+}
+.main-menu ul.navbar-nav{
+    float: right;
+}
+.main-menu ul.navbar-nav li.active a{
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.main-menu ul.navbar-nav li a{
+    color: #fff;
+    font-weight: 700;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.main-menu ul.navbar-nav li a:focus {
+    background: none;
+    outline: none;
+}
+.main-menu ul li:hover a{
+    background: none;
+}
+/*================================================
+    04. about section
+==================================================*/
+.about-section{
+    background:rgb(0,0,0,0.6)
+}
+.about-section .container>div{
+    margin-bottom:20px;
+}
+.author-image {
+  text-align: center;
+}
+.about-text {
+  padding: 24px 0;
+}
+.about-text h3,.about-text a{
+    color:#70e1f5;
+    font-size: 60px;
+    font-weight: 700;
+}
+.about-text p{
+    font-size: 18px;
+    line-height: 36px;
+}
+.variety,.movie,.star,.music{
+    text-indent: 2em;
+}
+.music-left,.music-right{
+    margin-top:190px;
+}
+/*================================================
+    05. service section
+==================================================*/
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+.section-title h2 span {
+  display: block;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+.single-services{
+    color: #666;  
+}
+.servise-icon{
+    width: 380px;
+    height: auto;
+    margin: 0 auto;
+    display: inline-table;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; 
+}
+.servise-icon img{
+    display: table-cell;
+    vertical-align: middle;
+}
+/*================================================
+    06. quotes area
+==================================================*/
+.quotes-area{
+background: rgb(0,0,0,0.4);
+}
+.quotes-content h3{
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-size: 800;
+}
+/*================================================
+    07. portfolio section
+==================================================*/
+#portfolio a>img{
+    border-radius: 50%;
+}
+#portfolio a{
+    transition: all 1s;
+    margin:0 0 40px 0;
+    height: 242px;
+    width: 242px;
+    border-radius:50%;
+    background: #fff;
+    float:left;
+    position: relative;
+    text-align: center;
+}
+#portfolio a:hover img{
+    transform: rotateZ(360deg) translateY(-10px);
+    box-shadow: 0 0 10px 3px #eee;
+    animation: rotate 3s linear infinite;
+}
+#portfolio a:hover .heart{
+    box-shadow: none
+}
+#portfolio .heart{
+    position: absolute;
+    left:40px;
+    top:42px;
+    height: 160px;
+    width: 160px;
+    border-radius: 25px;
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+to{transform: rotate(360deg)}
+}
+#portfolio .container>div a>p{
+    margin-top:10px;
+}
+/*================================================
+    08. review section
+==================================================*/
+
+/*================================================
+    09. contact section
+==================================================*/
+.contact-area{
+    background: rgb(0,0,0,0.4);
+}
+.contact-form{
+	position:relative;
+}
+#contact .container span{
+    color:white;
+}
+#contact i{
+    display:inline;
+}
+#contact .contactMe{
+    text-align: center;
+}
+/*================================================
+    10. footer section
+==================================================*/
+.footer{
+    background-color: rgb(0,0,0,0.7);
+    padding: 80px 0;
+}
+.footer-text{}
+.footer-text p{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.footer-text p strong {
+  letter-spacing: 1px;
+}
+@keyframes tantiao{
+    from{box-shadow:0 -5px 20px rgba(0,0,0,0);bottom:0;}
+    to{box-shadow:0 30px 30px rgba(0,0,0,0);bottom:30px;}
+    }
+#test img{
+    position: fixed;
+    cursor: pointer;
+    z-index: 9;
+    right:10px;
+    bottom:50px;
+    height: 10%;
+    width: auto;
+    animation:tantiao 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both;
+}
+

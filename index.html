@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/草莓团子.png" type="image/x-icon">
+    <title>董婉清的个人网页</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1066448_49n7u0hhf44.css">
+    <!--==== bootstrap ====-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--==== font-awesome ====-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!--==== owl-carousel ====-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <!--==== magnific-popup ====-->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!--==== animate css ====-->
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <!--==== style css ====-->
+    <link href="css/style.css" rel="stylesheet">
+    <!--==== responsive css ====-->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--==== jquery ====-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <!--[if lt IE 9]>
+<script src="js/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="js/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!--===== Preloader ====-->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div class="music-top">
+        <i class="iconfont icon-yinle"></i>
+        <i class="iconfont icon-shangyishou" onclick="nextSongs(randomRangeId())"></i>
+        <div class="play">
+            <i class="iconfont icon-bofang"></i>
+            <i class="iconfont icon-play_icon"></i>
+        </div>
+        <i class="iconfont icon-xiayishou" onclick="nextSongs(randomRangeId())"></i>
+        <i class="iconfont icon-chahao"></i>
+    </div>
+    <audio loop="loop" src="http://music.163.com/song/media/outer/url?id=1313648023" autoplay id="audio"></audio>
+
+    <!--=====****************** INTRO SECTION ****************************=====-->
+    <div id="home" class="intro-section">
+        <!--===== HEADER AREA =====-->
+        <header class="navbar custom-navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="logo">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <a href="#home"><img src="images/tuanzi.gif" alt=""></a>
+                            <!--== logo ==-->
+                            <span><img src="images/logo.png" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <nav class="main-menu">
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <!--== manin menu ==-->
+                                    <li class="active smooth-scroll"><a class="theme-color" href="#home">首页</a></li>
+                                    <li class="smooth-scroll"><a class="theme-color" href="#about">我的爱好</a></li>
+                                    <li class="smooth-scroll"><a class="theme-color" href="#services">我的生活</a></li>
+                                    <li class="smooth-scroll"><a class="theme-color" href="#portfolio">作业</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <!--===== END HEADER AREA ======-->
+        <!--======= WELCOME AREA =======-->
+        <div class="welcome-area">
+            <div id="particles-js"></div>
+            <div class="welcome-table">
+                <div class="welcome-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="welcome-text text-center">
+                                    <h4>能遇到我</h4>
+                                    <h1>算你 <span class="theme-color">幸运</span></h1>
+                                    <button id="active">关于我</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="me">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="welcome-text text-center">
+                                    <h1>董婉清</h1>
+                                    <img id="active" src="images/me.jpg" alt="">
+                                    <h4>来自武汉工程大学</h4>
+                                    <h1> <span class="theme-color">软件工程</span>专业</h1>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(".welcome-cell #active").click(function () {
+                        console.log($(this).index());
+                        $(".welcome-cell>div").eq($(this).index() == 2).show().siblings().hide();
+                    })
+                </script>
+            </div>
+
+        </div>
+    </div>
+    <!--=====***************** END INTRO SECTION ***********************=====-->
+
+
+    <!--=====************** ABOUT SECTION ***************=====-->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/banner1.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+
+                        <h3><a
+                                href="https://www.bilibili.com/bangumi/media/md1177/?from=search&seid=17100692779904068063">Clannad</a>
+                        </h3>
+                        <p>笑是对身边的事物感到一瞬间的幸福而表现出来的东西</p>
+                        <p>世界是美丽的，就算充满悲伤和泪水，也请睁开你的双眼，</p>
+                        <p>去做你想要做的事情，成为你想成为的人</p>
+                        <p>我希望不论什么时候，你都不要后悔我们的相遇</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/banner2.jpeg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+                        <h3><a
+                                href="https://www.bilibili.com/video/av7113563?from=search&seid=8677374905575447310">萤火之森</a>
+                        </h3>
+                        <p>无法触碰的爱恋，融化在一生一世的拥抱中</p>
+                        <p>其实美丽的故事都是没有结局的，只因为它没有结局所以才会美丽</p>
+                        <p>每个女孩心里都有一片萤火之森，那里住着一个少年</p>
+                        <p>青春是萤火绚丽的流动银河，灿烂却也极致0短暂</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/banner3.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+                        <h3><a
+                                href="https://v.youku.com/v_show/id_XNTQwMTgxMTE2.html?spm=a2h0k.11417342.soresults.dposter">火影忍者</a>
+                        </h3>
+                        <p>虽然迷茫与痛苦过，但也曾天真的笑过</p>
+                        <p>思念着你的人所在的地方就是你的归处</p>
+                        <p>如果将梦想作为信仰，不放弃地追求下去，一定会梦想成真的。</p>
+                        <p>人正是因为度过了一段阴暗岁月，才会更渴求黎明的曙光</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide"
+                                        alt="First slide" src="images/variety2.jpg">
+                                </div>
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"
+                                        alt="Second slide" src="images/variety.jpeg">
+                                </div>
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"
+                                        alt="Second slide" src="images/variety4.jpg">
+                                </div>
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"
+                                        alt="Second slide" src="images/variety5.jpg">
+                                </div>
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"
+                                        alt="Second slide" src="images/variety6.jpg">
+                                </div>
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"
+                                        alt="Second slide" src="images/variety7.jpg">
+                                </div>
+                                <div class="item">
+                                    <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"
+                                        alt="Second slide" src="images/variety8.jpg">
+                                </div>
+                                <div class="item active">
+                                    <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide"
+                                        alt="Third slide" src="images/variety3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+                        <h3>我喜欢的综艺</h3>
+                        <p class="variety">《向往的生活》《明星大侦探》《快乐大本营》《我家那闺女》《妻子的浪漫旅行》《奔跑吧，兄弟》
+                            等等一系列关于竞技，贴近生活，烧脑的综艺。</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/movie1.png" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+                        <h3>我喜欢的影视</h3>
+                        <p class="movie">《穿普拉达的女王》《非自然死亡》《我才不会对黑崎君言听计从》《近距离恋爱》《银河护卫队》《实习生》《忠犬八公的故事》《绿野血踪》《知否知否应是绿肥红瘦》
+                            等等一系列关于成长，科幻，烧脑以及甜死人不偿命的影视剧。</p>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+                        <h3>我的爱豆</h3>
+                        <p class="star">喜欢胡歌是从仙剑开始的，人帅，品德好，演技好，简直完美；
+                            喜欢小白是从明星大侦探第三季开始的，既有颜值又有高智能，简直就是福尔摩斯白，而且他也跟我一样不加糖；
+                            喜欢刘昊然不知道什么时候开始的，就是觉得他可爱(●'◡'●)</p>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/star1.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/star2.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/star3.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+                        <h3>我喜欢的音乐</h3>
+                        <p class="music">其实一开始我是蛮喜欢李玉刚的歌，可能因为他那时候上春晚比较多，而且我也比较喜欢古韵；
+                            许嵩的歌是从初二才了解的，只因一首千百度，自从种草后就中毒了；
+                            医生的歌是因为初中的时候音乐课听了他的浮夸，被吸引了，一发不可自拔；
+                            而杰哥的歌是因为我弟弟放了一首逆战，那是游戏的主题曲，当时就被吸引了，又无法自拔。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img class="music-left" src="images/zhangjie.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="images/xusong.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+                        <img class="music-right" src="images/chenyixun.jpg" alt="Author Image">
+                        <!--=== author image ===-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!--=====*********** END ABOUT SECTION **************=====-->
+    <!--======**************** SERVICES SECTION ******************=======-->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2><span class="theme-color">我 爱</span> 摄影</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="single-services text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="servise-icon">
+                            <video id="media" preload controls src="media/picture.mp4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======*************** END SERVICES SECTION ****************=======-->
+    <!--QUOTES AREA-->
+    <div id="quotes" class="quotes-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="quotes-content text-center">
+                        <h3>我的作业</h3>
+                        <p>打代码使我快乐</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END QUOTES AREA-->
+    <!--======********** PORTFOLIO SECTION *********======-->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2><span class="theme-color">我最近的作业</span> homework</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/index.html"><img src="images/homework1.jpg">
+                        <p>诗意生活</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a><img class="heart" src="images/timg.gif" alt=""></a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/homework02.html"><img src="images/homework2.jpg">
+                        <p>牛刀小试</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/homework03.html"><img src="images/homework3.jpg">
+                        <p>关于远大</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/homework04.html"><img src="images/homework4.jpg">
+                        <p>家居医生</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/homework05.html"><img src="images/homework5.jpg">
+                        <p>家居首页</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a><img class="heart" src="images/timg1.gif" alt=""></a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/小米登录.html"><img src="images/homework6.jpg">
+                        <p>小米登录</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/01家居医生.html"><img src="images/homework7.jpg">
+                        <p>家居用户</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a><img class="heart" src="images/timg2.gif" alt=""></a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/小米商城.html"><img src="images/homework8.jpg">
+                        <p>小米商城</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 single-work">
+                    <a href="https://homework.dwq2019.top/html/木兮地板.html"><img src="images/homework9.jpg">
+                        <p>木兮地板</p>
+                    </a>
+                </div>
+
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--======************ END PORTFOLIO SECTION **************======-->
+    <!--======******************** CONTACT INFO SECTION **********************======-->
+    <section id="contact" class="contact-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2><span class="theme-color">联系我</span> Contact</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row contactMe">
+                <div class="col-md-12 wow fadeInUp" data-wow-delay="0.4s">
+                    <!-- Start Contact Form -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span><i class="iconfont icon-qq"></i> <span>qq:1853999530</span></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span><i class="iconfont icon-weixin"></i> <span>微信:Vicky_dwq520</span></span>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="shouji"><i class="iconfont icon-shouji"></i><span>手机:13419697536</span></span>
+                        </div>
+                    </div>
+                    <!-- End Contact Form -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======**************** END CONTACT INFO SECTION ********************======-->
+    <!--======******************* FOOTER SECTION ******************======-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="footer-text wow fadeInUp" data-wow-delay="0.4s">
+                        <p>Copyright &copy; 2018.Company name All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--======******************* END FOOTER SECTION ***************======-->
+    <div id="test">
+        <img src="images/tuanzi1.png" alt="">
+    </div>
+    <script>
+        $("#test").click(function () {
+            $("html,body").animate({ scrollTop: "0" }, 1000)
+        })
+        var Arr = ["28285910", "571338279", "1313354324", "574566207", "536622304", "534540206", "1313648023", "26217171", "1311347592", "1330348068", "449818741", "1293886117"];
+        function nextSongs(num) {
+            document.getElementById('audio').src = `http://music.163.com/song/media/outer/url?id=${num}`;
+        }
+        function randomRangeId() {
+            var n = Math.floor(Math.random() * Arr.length);
+            return Arr[n];
+        }
+        var myMus = document.getElementById('audio');
+        $(".play i").click(function () {
+            console.log($(this).index());
+            $(".play i").eq($(this).index() == 0).show().siblings().hide();
+            if (myMus.paused) {
+                myMus.play();
+            } else {
+                myMus.pause();
+            }
+        })
+        $(".music-top .icon-chahao").click(function () {
+            console.log($(this).index());
+            $(".music-top").hide();
+            $("audio").hide();
+        })
+        $(".logo a>img").click(function () {
+            $(".music-top").show();
+            $("audio").show();
+        })
+    </script>
+
+    <!--==== plugins js ====-->
+    <script src="js/plugins.js"></script>
+    <!--==== magnific-popup-options js ====-->
+    <script src="js/magnific-popup-options.js"></script>
+    <!--==== validator js ====-->
+    <script src="js/validator.min.js"></script>
+    <!--==== particles js ====-->
+    <script src="js/particles.min.js"></script>
+    <!--==== app js ====-->
+    <script src="js/app.js"></script>
+    <!--==== app js ====-->
+    <script src="js/wow-1.3.0.min.js"></script>
+    <!--==== main js ====-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
